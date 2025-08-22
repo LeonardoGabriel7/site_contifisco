@@ -515,3 +515,224 @@
 
 
 
+/* Seção de Cards de Serviços - Contabilidade */
+.contabilidade-services {
+    padding: 40px 20px 30px;
+    background-color: #fff;
+}
+
+.contabilidade-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contabilidade-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contabilidade-title {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.3;
+}
+
+.contabilidade-desc {
+    font-size: 1.1rem;
+    color: #777;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+.contabilidade-cards-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.contabilidade-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contabilidade-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 25px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    text-align: center;
+    border-top: 3px solid #FF6E00;
+    flex: 1;
+    max-width: 350px;
+}
+
+.contabilidade-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.contabilidade-card-icon {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 110, 0, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 18px;
+    font-size: 1.7rem;
+    color: #FF6E00;
+}
+
+.contabilidade-card-title {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contabilidade-card-text {
+    color: #666;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    .contabilidade-card {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 992px) {
+    .contabilidade-services {
+        padding: 35px 20px 25px;
+    }
+    
+    .contabilidade-title {
+        font-size: 1.6rem;
+    }
+    
+    .contabilidade-desc {
+        font-size: 1rem;
+    }
+    
+    .contabilidade-row {
+        gap: 18px;
+    }
+    
+    .contabilidade-card {
+        padding: 22px 18px;
+        max-width: 280px;
+    }
+    
+    .contabilidade-card-icon {
+        width: 55px;
+        height: 55px;
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+    
+    .contabilidade-card-title {
+        font-size: 1.1rem;
+    }
+    
+    .contabilidade-card-text {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .contabilidade-row {
+        flex-wrap: wrap;
+    }
+    
+    .contabilidade-card {
+        max-width: calc(50% - 10px);
+        min-width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contabilidade-services {
+        padding: 30px 15px 20px;
+    }
+    
+    .contabilidade-header {
+        margin-bottom: 30px;
+    }
+    
+    .contabilidade-title {
+        font-size: 1.4rem;
+    }
+    
+    .contabilidade-cards-wrapper {
+        gap: 20px;
+    }
+    
+    .contabilidade-row {
+        gap: 15px;
+    }
+    
+    .contabilidade-card {
+        padding: 20px 15px;
+        max-width: 100%;
+    }
+    
+    .contabilidade-card-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.4rem;
+        margin-bottom: 12px;
+    }
+    
+    .contabilidade-card-title {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 650px) {
+    .contabilidade-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contabilidade-card {
+        min-width: 100%;
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 576px) {
+    .contabilidade-services {
+        padding: 25px 15px 15px;
+    }
+    
+    .contabilidade-title {
+        font-size: 1.3rem;
+    }
+    
+    .contabilidade-desc {
+        font-size: 0.95rem;
+    }
+    
+    .contabilidade-card-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+    }
+    
+    .contabilidade-card-title {
+        font-size: 1rem;
+    }
+    
+    .contabilidade-card-text {
+        font-size: 0.85rem;
+    }
+}
