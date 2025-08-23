@@ -4,12 +4,14 @@
     --cor-branco: #FFFFFF;
     --cor-texto: #333333;
     --sombra: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --fonte-texto: 'Montserrat', sans-serif;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: var(--fonte-texto);
 }
 
 header {
@@ -19,6 +21,7 @@ header {
     top: 0;
     z-index: 1000;
     padding: 0 15px;
+    font-family: var(--fonte-texto);
 }
 
 .container {
@@ -49,12 +52,12 @@ nav ul li {
 }
 
 nav ul li a {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
+    font-family: var(--fonte-texto);
+    font-weight: 700;
     color: var(--cor-texto);
     transition: color 0.3s;
+    text-decoration: none; /* remove a listra */
 }
-
 nav ul li a:hover {
     color: var(--cor-primaria);
 }
@@ -69,10 +72,13 @@ nav ul li a:hover {
     color: var(--cor-branco);
     padding: 10px 20px;
     border-radius: 4px;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--fonte-texto);
     font-weight: 500;
     transition: background-color 0.3s;
     white-space: nowrap;
+
+
+    text-decoration: none; /* remove a listra */
 }
 
 .btn-header:hover {
