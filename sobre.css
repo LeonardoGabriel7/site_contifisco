@@ -1,0 +1,457 @@
+/* ==========================================================================
+   Variáveis e Reset
+   ========================================================================== */
+:root {
+    --cor-primaria: #FF6E00;
+    --cor-branco: #FFFFFF;
+    --cor-texto: #333333;
+    --cor-cinza: #666666;
+    --cor-cinza-claro: #f9f9f9;
+    --sombra: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --fonte-titulo: 'Montserrat', sans-serif;
+    --fonte-texto: 'Montserrat', sans-serif;
+}
+
+
+
+
+ 
+        
+        /* Capa com Vídeo */
+        .history-hero {
+            position: relative;
+            height: 60vh;
+            min-height: 400px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--cor-branco);
+            text-align: center;
+        }
+        
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        
+        .video-background video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 0;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        /* Seção Nossa História */
+        .our-history {
+            padding: 80px 0;
+            background-color: var(--cor-branco);
+        }
+        
+        .history-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 50px;
+        }
+        
+        .history-text p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: var(--cor-cinza);
+            text-align: justify;
+            line-height: 1.8;
+        }
+        
+        .mission-vision-values {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .mv-item {
+            background-color: var(--cor-cinza-claro);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: var(--sombra);
+            transition: transform 0.3s ease;
+        }
+        
+        .mv-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .mv-icon {
+            width: 70px;
+            height: 70px;
+            background-color: rgba(255, 110, 0, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 1.8rem;
+            color: var(--cor-primaria);
+        }
+        
+        .mv-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--cor-texto);
+        }
+        
+        .mv-item p {
+            color: var(--cor-cinza);
+            line-height: 1.6;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 992px) {
+            .hero-content h1 {
+                font-size: 2.8rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .history-hero {
+                height: 50vh;
+                min-height: 350px;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+            
+            .our-history {
+                padding: 60px 0;
+            }
+            
+            .history-content {
+                gap: 30px;
+            }
+            
+            .history-text p {
+                font-size: 1rem;
+                text-align: left;
+            }
+            
+            .mission-vision-values {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .mv-item {
+                padding: 25px 20px;
+            }
+            
+            .mv-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+            
+            .mv-item h3 {
+                font-size: 1.3rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .history-hero {
+                height: 40vh;
+                min-height: 300px;
+            }
+            
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+            
+            .our-history {
+                padding: 50px 0;
+            }
+        }
+
+/* ==========================================================================
+   Seção Família
+   ========================================================================== */
+.family-section {
+    padding: 60px 0;
+    background-color: var(--cor-cinza-claro);
+}
+
+.family-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 0 10px;
+}
+
+.family-header h2 {
+    font-size: 1.8rem;
+    color: var(--cor-primaria);
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+.family-header p {
+    font-size: 1.1rem;
+    color: var(--cor-cinza);
+    font-style: italic;
+}
+
+.qualities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.quality-item {
+    background-color: var(--cor-branco);
+    border-radius: 8px;
+    padding: 25px 20px;
+    text-align: center;
+    box-shadow: var(--sombra);
+    transition: all 0.3s ease;
+}
+
+.quality-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.quality-icon {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 110, 0, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    font-size: 1.5rem;
+    color: var(--cor-primaria);
+}
+
+.quality-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    color: var(--cor-texto);
+}
+
+.quality-item p {
+    color: var(--cor-cinza);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   Responsividade para Mobile
+   ========================================================================== */
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .family-header h2 {
+        font-size: 1.6rem;
+    }
+    
+    .mission-vision-values,
+    .qualities-grid {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .our-history,
+    .family-section {
+        padding: 50px 0;
+    }
+    
+    .section-header {
+        margin-bottom: 30px;
+    }
+    
+    .section-header h2 {
+        font-size: 1.6rem;
+    }
+    
+    .history-content {
+        gap: 30px;
+    }
+    
+    .history-text p {
+        font-size: 0.95rem;
+        text-align: left;
+        padding: 0;
+    }
+    
+    .mission-vision-values {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin-top: 15px;
+    }
+    
+    .mv-item {
+        padding: 20px 15px;
+    }
+    
+    .family-header {
+        margin-bottom: 30px;
+    }
+    
+    .family-header h2 {
+        font-size: 1.5rem;
+        padding: 0 5px;
+    }
+    
+    .family-header p {
+        font-size: 1rem;
+    }
+    
+    .qualities-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .quality-item {
+        padding: 20px 15px;
+    }
+    
+    .mv-icon,
+    .quality-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
+        margin-bottom: 12px;
+    }
+    
+    .mv-item h3,
+    .quality-item h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+    
+    .mv-item p,
+    .quality-item p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .our-history,
+    .family-section {
+        padding: 40px 0;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    .section-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .section-header h2::after {
+        width: 50px;
+        bottom: -8px;
+    }
+    
+    .history-text p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+    
+    .mv-item,
+    .quality-item {
+        padding: 18px 15px;
+        border-radius: 6px;
+    }
+    
+    .family-header h2 {
+        font-size: 1.4rem;
+        line-height: 1.4;
+    }
+    
+    .family-header p {
+        font-size: 0.95rem;
+    }
+    
+    .mv-icon,
+    .quality-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+    
+    .mv-item h3,
+    .quality-item h3 {
+        font-size: 1.1rem;
+    }
+    
+    .mv-item p,
+    .quality-item p {
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 400px) {
+    .section-header h2 {
+        font-size: 1.4rem;
+    }
+    
+    .family-header h2 {
+        font-size: 1.3rem;
+    }
+    
+    .history-text p {
+        font-size: 0.85rem;
+    }
+    
+    .mv-item,
+    .quality-item {
+        padding: 15px 12px;
+    }
+    
+    .mv-icon,
+    .quality-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
+}

@@ -56,6 +56,120 @@
 
 
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS Contfisco - Nossos Clientes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="clientes-style.css">
+</head>
+<body>
+    <!-- Seção de Clientes -->
+    <section class="clients-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nossos Clientes</h2>
+                <p>Conheça algumas das empresas que confiam em nossos serviços</p>
+            </div>
+            
+            <div class="clients-carousel">
+                <div class="carousel-track">
+                    <!-- Primeira linha de logos -->
+                    <div class="carousel-slide">
+                        <div class="client-logo"><img src="1.png" alt="Cliente 1"></div>
+                        <div class="client-logo"><img src="2.png" alt="Cliente 2"></div>
+                        <div class="client-logo"><img src="3.png" alt="Cliente 3"></div>
+                        <div class="client-logo"><img src="4.png" alt="Cliente 4"></div>
+                        <div class="client-logo"><img src="5.png" alt="Cliente 5"></div>
+                        <div class="client-logo"><img src="6.png" alt="Cliente 6"></div>
+                        <div class="client-logo"><img src="7.png" alt="Cliente 7"></div>
+                        <div class="client-logo"><img src="8.png" alt="Cliente 8"></div>
+                    </div>
+                    
+                    <!-- Segunda linha de logos -->
+                    <div class="carousel-slide">
+                        <div class="client-logo"><img src="9.png" alt="Cliente 9"></div>
+                        <div class="client-logo"><img src="10.png" alt="Cliente 10"></div>
+                        <div class="client-logo"><img src="11.png" alt="Cliente 11"></div>
+                        <div class="client-logo"><img src="12.png" alt="Cliente 12"></div>
+                        <div class="client-logo"><img src="13.png" alt="Cliente 13"></div>
+                        <div class="client-logo"><img src="14.png" alt="Cliente 14"></div>
+                        <div class="client-logo"><img src="15.png" alt="Cliente 15"></div>
+                        <div class="client-logo"><img src="16.png" alt="Cliente 16"></div>
+                    </div>
+                    
+                    <!-- Terceira linha de logos -->
+                    <div class="carousel-slide">
+                        <div class="client-logo"><img src="17.png" alt="Cliente 17"></div>
+                        <div class="client-logo"><img src="18.png" alt="Cliente 18"></div>
+                        <div class="client-logo"><img src="19.png" alt="Cliente 19"></div>
+                        <div class="client-logo"><img src="20.png" alt="Cliente 20"></div>
+                        <div class="client-logo"><img src="21.png" alt="Cliente 21"></div>
+                        <div class="client-logo"><img src="22.png" alt="Cliente 22"></div>
+                        <div class="client-logo"><img src="23.png" alt="Cliente 23"></div>
+                        <div class="client-logo"><img src="1.png" alt="Cliente 1"></div> <!-- Repetição para efeito contínuo -->
+                    </div>
+                </div>
+            </div>
+            
+            <div class="clients-info">
+                <p>Mais de <span>100 empresas</span> confiam em nossos serviços especializados</p>
+                <a href="https://api.whatsapp.com/send/?phone=5511969424232&text=Ola%2C+quero+saber+mais+sobre+os+serviços+da+CS+Confisco.&type=phone_number&app_absent=0" 
+                   class="whatsapp-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Seja nosso cliente
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const track = document.querySelector('.carousel-track');
+            const slides = document.querySelectorAll('.carousel-slide');
+            const slideWidth = slides[0].offsetWidth;
+            let currentPosition = 0;
+            let animationId;
+            
+            // Duplicar slides para criar efeito contínuo
+            slides.forEach(slide => {
+                const clone = slide.cloneNode(true);
+                track.appendChild(clone);
+            });
+            
+            function animateCarousel() {
+                currentPosition -= 1; // Velocidade do movimento
+                
+                // Resetar posição quando chegar ao final
+                if (currentPosition <= -slideWidth * slides.length) {
+                    currentPosition = 0;
+                }
+                
+                track.style.transform = `translateX(${currentPosition}px)`;
+                animationId = requestAnimationFrame(animateCarousel);
+            }
+            
+            // Iniciar animação
+            animateCarousel();
+            
+            // Pausar animação ao passar o mouse
+            const carousel = document.querySelector('.clients-carousel');
+            carousel.addEventListener('mouseenter', () => {
+                cancelAnimationFrame(animationId);
+            });
+            
+            // Retomar animação ao remover o mouse
+            carousel.addEventListener('mouseleave', () => {
+                animationId = requestAnimationFrame(animateCarousel);
+            });
+        });
+    </script>
+</body>
+</html>
 
 
 
@@ -63,8 +177,7 @@
 
 
 
-
-
+  
 
 
 

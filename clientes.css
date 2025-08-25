@@ -1,0 +1,339 @@
+/* ==========================================================================
+   Variáveis e Reset
+   ========================================================================== */
+:root {
+    --cor-primaria: #FF6E00;
+    --cor-whatsapp: #25D366;
+    --cor-branco: #FFFFFF;
+    --cor-texto: #333333;
+    --cor-cinza: #666666;
+    --cor-cinza-claro: #f9f9f9;
+    --sombra: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --fonte-texto: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-texto);
+    color: var(--cor-texto);
+    line-height: 1.6;
+    overflow-x: hidden;
+    background-color: #f5f5f5;
+    font-weight: 400;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* ==========================================================================
+   Seção de Clientes
+   ========================================================================== */
+.clients-section {
+    padding: 80px 0;
+    background-color: var(--cor-branco);
+    text-align: center;
+}
+
+.section-header {
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: var(--cor-primaria);
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+    font-weight: 700;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--cor-primaria);
+}
+
+.section-header p {
+    font-size: 1.2rem;
+    color: var(--cor-cinza);
+    margin-top: 20px;
+    font-weight: 400;
+}
+
+/* Carrossel de Clientes */
+.clients-carousel {
+    overflow: hidden;
+    position: relative;
+    margin: 40px 0;
+    padding: 20px 0;
+}
+
+.carousel-track {
+    display: flex;
+    animation: carousel-animation 40s linear infinite;
+    width: max-content;
+}
+
+.carousel-slide {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 30px;
+    padding: 0 15px;
+}
+
+.client-logo {
+    flex: 0 0 auto;
+    width: 150px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--cor-branco);
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: var(--sombra);
+    transition: all 0.3s ease;
+    border: 1px solid #f0f0f0;
+}
+
+.client-logo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.client-logo img {
+    max-width: 100%;
+    max-height: 70px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+.client-logo:hover img {
+    transform: scale(1.05);
+}
+
+/* Informações e CTA */
+.clients-info {
+    margin-top: 50px;
+    padding: 30px;
+    background-color: var(--cor-cinza-claro);
+    border-radius: 10px;
+    box-shadow: var(--sombra);
+}
+
+.clients-info p {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: var(--cor-texto);
+    font-weight: 500;
+}
+
+.clients-info span {
+    color: var(--cor-primaria);
+    font-weight: 700;
+}
+
+.whatsapp-btn {
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+    padding: 14px 28px;
+    border-radius: 5px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    gap: 10px;
+    font-size: 1.1rem;
+    font-family: var(--fonte-texto);
+}
+
+.whatsapp-btn:hover {
+    background-color: #ff9900;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(231, 151, 2, 0.3);
+}
+
+/* Animação do carrossel */
+@keyframes carousel-animation {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-33.33%);
+    }
+}
+
+/* ==========================================================================
+   Responsividade para Mobile
+   ========================================================================== */
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 20px;
+    }
+    
+    .carousel-slide {
+        gap: 25px;
+    }
+    
+    .client-logo {
+        width: 140px;
+        height: 90px;
+    }
+}
+
+@media (max-width: 992px) {
+    .clients-section {
+        padding: 60px 0;
+    }
+    
+    .section-header h2 {
+        font-size: 2.2rem;
+    }
+    
+    .section-header p {
+        font-size: 1.1rem;
+    }
+    
+    .carousel-slide {
+        gap: 20px;
+    }
+    
+    .client-logo {
+        width: 130px;
+        height: 85px;
+        padding: 12px;
+    }
+    
+    .clients-info p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .clients-section {
+        padding: 50px 0;
+    }
+    
+    .section-header {
+        margin-bottom: 40px;
+    }
+    
+    .section-header h2 {
+        font-size: 1.9rem;
+        font-weight: 600;
+    }
+    
+    .section-header h2::after {
+        width: 70px;
+        bottom: -8px;
+    }
+    
+    .section-header p {
+        font-size: 1rem;
+    }
+    
+    .clients-carousel {
+        margin: 30px 0;
+    }
+    
+    .carousel-slide {
+        gap: 15px;
+        padding: 0 10px;
+    }
+    
+    .client-logo {
+        width: 110px;
+        height: 75px;
+        padding: 10px;
+    }
+    
+    .client-logo img {
+        max-height: 55px;
+    }
+    
+    .clients-info {
+        margin-top: 40px;
+        padding: 25px 20px;
+    }
+    
+    .clients-info p {
+        font-size: 1.1rem;
+    }
+    
+    .whatsapp-btn {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .clients-section {
+        padding: 40px 0;
+    }
+    
+    .section-header h2 {
+        font-size: 1.7rem;
+    }
+    
+    .carousel-slide {
+        gap: 12px;
+    }
+    
+    .client-logo {
+        width: 100px;
+        height: 70px;
+    }
+    
+    .client-logo img {
+        max-height: 50px;
+    }
+    
+    .clients-info {
+        margin-top: 30px;
+        padding: 20px 15px;
+    }
+    
+    .clients-info p {
+        font-size: 1rem;
+    }
+    
+    .whatsapp-btn {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .section-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .carousel-slide {
+        gap: 10px;
+    }
+    
+    .client-logo {
+        width: 90px;
+        height: 65px;
+        padding: 8px;
+    }
+    
+    .client-logo img {
+        max-height: 45px;
+    }
+}
