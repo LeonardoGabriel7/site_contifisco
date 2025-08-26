@@ -199,78 +199,195 @@
             }
         }
 
-/* ==========================================================================
-   Seção Família
-   ========================================================================== */
-.family-section {
-    padding: 60px 0;
-    background-color: var(--cor-cinza-claro);
-}
-
-.family-header {
-    text-align: center;
-    margin-bottom: 40px;
-    padding: 0 10px;
-}
-
-.family-header h2 {
-    font-size: 1.8rem;
-    color: var(--cor-primaria);
-    margin-bottom: 12px;
-    line-height: 1.3;
-}
-
-.family-header p {
-    font-size: 1.1rem;
-    color: var(--cor-cinza);
-    font-style: italic;
-}
-
-.qualities-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 20px;
-}
-
-.quality-item {
-    background-color: var(--cor-branco);
-    border-radius: 8px;
-    padding: 25px 20px;
-    text-align: center;
-    box-shadow: var(--sombra);
-    transition: all 0.3s ease;
-}
-
-.quality-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-.quality-icon {
-    width: 60px;
-    height: 60px;
-    background-color: rgba(255, 110, 0, 0.1);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 15px;
-    font-size: 1.5rem;
-    color: var(--cor-primaria);
-}
-
-.quality-item h3 {
-    font-size: 1.3rem;
-    margin-bottom: 12px;
-    color: var(--cor-texto);
-}
-
-.quality-item p {
-    color: var(--cor-cinza);
-    line-height: 1.6;
-    font-size: 0.95rem;
-}
-
+ /* ==========================================================================
+           Seção Família ATUALIZADA - Layout 2x2
+           ========================================================================== */
+        .family-section {
+            padding: 80px 0;
+            background-color: var(--cor-cinza-claro);
+        }
+        
+        .family-header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 0 10px;
+        }
+        
+        .family-header h2 {
+            font-size: 2.2rem;
+            color: var(--cor-primaria);
+            margin-bottom: 15px;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        
+        .family-header p {
+            font-size: 1.3rem;
+            color: var(--cor-cinza);
+            font-style: italic;
+            font-weight: 500;
+        }
+        
+        .qualities-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        
+        .quality-item {
+            position: relative;
+            height: 380px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--sombra);
+            transition: all 0.4s ease;
+        }
+        
+        .quality-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .quality-image {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .quality-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .quality-item:hover .quality-image img {
+            transform: scale(1.05);
+        }
+        
+        .quality-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7));
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .quality-overlay h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--cor-branco);
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .quality-overlay p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            max-width: 90%;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        }
+        
+        .quality-icon {
+            width: 70px;
+            height: 70px;
+            background-color: rgba(255, 107, 0, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            color: var(--cor-branco);
+        }
+        
+        /* Media Queries para Responsividade */
+        @media (max-width: 1024px) {
+            .qualities-grid {
+                gap: 20px;
+            }
+            
+            .quality-item {
+                height: 350px;
+            }
+            
+            .quality-overlay h3 {
+                font-size: 1.8rem;
+            }
+            
+            .quality-overlay p {
+                font-size: 1rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .family-section {
+                padding: 60px 0;
+            }
+            
+            .family-header h2 {
+                font-size: 1.8rem;
+            }
+            
+            .family-header p {
+                font-size: 1.1rem;
+            }
+            
+            .qualities-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+            
+            .quality-item {
+                height: 320px;
+            }
+            
+            .quality-overlay {
+                padding: 20px;
+            }
+            
+            .quality-overlay h3 {
+                font-size: 1.6rem;
+                margin-bottom: 15px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .family-section {
+                padding: 50px 0;
+            }
+            
+            .family-header {
+                margin-bottom: 40px;
+            }
+            
+            .quality-item {
+                height: 280px;
+            }
+            
+            .quality-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+                margin-bottom: 15px;
+            }
+            
+            .quality-overlay h3 {
+                font-size: 1.4rem;
+            }
+            
+            .quality-overlay p {
+                font-size: 0.95rem;
+            }
+        }
 /* ==========================================================================
    Responsividade para Mobile
    ========================================================================== */
