@@ -22,6 +22,9 @@ header {
     z-index: 1000;
     padding: 0 15px;
     font-family: var(--fonte-texto);
+    height: 80px; /* Altura fixa para o header */
+    display: flex;
+    align-items: center;
 }
 
 .container {
@@ -34,14 +37,22 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 0;
+    padding: 5px 0; /* Reduzido de 15px para 5px (espaço vertical) */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
 .logo img {
-    height: 50px;
+    height: 60px; /* Aumentado de 50px para 60px */
     width: auto;
+    object-fit: contain;
 }
 
+/* Restante do seu CSS permanece igual */
 nav ul {
     display: flex;
     list-style: none;
@@ -76,8 +87,6 @@ nav ul li a:hover {
     font-weight: 500;
     transition: background-color 0.3s;
     white-space: nowrap;
-
-
     text-decoration: none; /* remove a listra */
 }
 
@@ -103,7 +112,7 @@ nav ul li a:hover {
     text-align: center;
 }
 
-/* Media Queries */
+/* Media Queries - Atualizadas para refletir as mudanças */
 @media (max-width: 992px) {
     nav ul li {
         margin: 0 10px;
@@ -118,6 +127,7 @@ nav ul li a:hover {
 @media (max-width: 768px) {
     header {
         padding: 0 20px;
+        height: 70px; /* Altura reduzida para mobile */
     }
     
     .menu-toggle {
@@ -126,10 +136,10 @@ nav ul li a:hover {
     
     nav {
         position: fixed;
-        top: 80px;
+        top: 70px; /* Ajustado para a nova altura do header */
         left: -100%;
         width: 80%;
-        height: calc(100vh - 80px);
+        height: calc(100vh - 70px);
         background-color: var(--cor-branco);
         box-shadow: var(--sombra);
         transition: left 0.3s ease;
@@ -156,19 +166,24 @@ nav ul li a:hover {
     .mobile-buttons {
         display: flex;
     }
+    
+    .logo img {
+        height: 50px; /* Ajuste para mobile */
+    }
 }
 
 @media (max-width: 576px) {
     header {
         padding: 0 15px;
+        height: 65px; /* Altura reduzida para mobile pequeno */
     }
     
     .header-container {
-        padding: 12px 0;
+        padding: 3px 0; /* Reduzido ainda mais para mobile */
     }
     
     .logo img {
-        height: 40px;
+        height: 45px; /* Ajuste para mobile pequeno */
     }
     
     .menu-toggle {
@@ -177,8 +192,8 @@ nav ul li a:hover {
     }
     
     nav {
-        top: 64px;
-        height: calc(100vh - 64px);
+        top: 65px;
+        height: calc(100vh - 65px);
         padding: 25px;
     }
 }
@@ -189,14 +204,13 @@ nav ul li a:hover {
     }
     
     .logo img {
-        height: 36px;
+        height: 40px;
     }
     
     .menu-toggle {
         font-size: 20px;
     }
 }
-
 
 
 
