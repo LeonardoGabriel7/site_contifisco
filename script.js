@@ -1,14 +1,12 @@
 
-
-// HEADER 
 document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('nav');
-    
+
     if (menuToggle && nav) {
         menuToggle.addEventListener('click', function() {
             nav.classList.toggle('active');
-            
+
             // Alterar ícone do hamburger para X quando aberto
             const icon = menuToggle.querySelector('i');
             if (nav.classList.contains('active')) {
@@ -20,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-    
+
     // Fechar menu ao clicar em um link (opcional)
     const navLinks = document.querySelectorAll('nav ul li a');
     navLinks.forEach(link => {
