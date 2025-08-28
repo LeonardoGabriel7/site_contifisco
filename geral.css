@@ -15,208 +15,326 @@
 }
 
 header {
-    background-color: var(--cor-branco);
-    box-shadow: var(--sombra);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    padding: 0 15px;
-    font-family: var(--fonte-texto);
-    height: 80px; /* Altura fixa para o header */
-    display: flex;
-    align-items: center;
-}
+            background-color: var(--cor-branco);
+            box-shadow: var(--sombra);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 0 15px;
+            font-family:'Montserrat', sans-serif ;
+            font-weight: 700;
+            height: 80px;
+            display: flex;
+            align-items: center;
+        }
 
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px 0; /* Reduzido de 15px para 5px (espaço vertical) */
-}
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 0;
+        }
 
-.logo {
-    display: flex;
-    align-items: center;
-    height: 100%;
-}
+        .logo {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            flex-shrink: 0; /* Impede que a logo encolha */
+        }
 
-.logo img {
-    height: 60px; /* Aumentado de 50px para 60px */
-    width: auto;
-    object-fit: contain;
-}
+        .logo img {
+            height: 65px; /* Aumentei ainda mais a logo no desktop */
+            width: auto;
+            object-fit: contain;
+        }
 
-/* Restante do seu CSS permanece igual */
-nav ul {
-    display: flex;
-    list-style: none;
-}
+        /* Menu central */
+        nav {
+            flex: 1; /* Ocupa o espaço disponível */
+            display: flex;
+            justify-content: center; /* Centraliza o menu */
+        }
 
-nav ul li {
-    margin: 0 15px;
-}
+        nav ul {
+            display: flex;
+            list-style: none;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
 
-nav ul li a {
-    font-family: var(--fonte-texto);
-    font-weight: 700;
-    color: var(--cor-texto);
-    transition: color 0.3s;
-    text-decoration: none; /* remove a listra */
-}
-nav ul li a:hover {
-    color: var(--cor-primaria);
-}
+        nav ul li {
+            margin: 0 10px;
+        }
 
-.header-buttons {
-    display: flex;
-    gap: 15px;
-}
+        nav ul li a {
+            font-family: var(--fonte-texto);
+            font-weight: 700;
+            color: var(--cor-texto);
+            transition: color 0.3s;
+            text-decoration: none;
+            font-size: 0.95rem;
+            white-space: nowrap;
+        }
+        
+        nav ul li a:hover {
+            color: var(--cor-primaria);
+        }
 
-.btn-header {
-    background-color: var(--cor-primaria);
-    color: var(--cor-branco);
-    padding: 10px 20px;
-    border-radius: 4px;
-    font-family: var(--fonte-texto);
-    font-weight: 500;
-    transition: background-color 0.3s;
-    white-space: nowrap;
-    text-decoration: none; /* remove a listra */
-}
+        /* Botões à direita */
+        .header-buttons {
+            display: flex;
+            gap: 12px;
+            flex-shrink: 0; /* Impede que os botões encolham */
+        }
 
-.btn-header:hover {
-    background-color: #e56200;
-}
+        .btn-header {
+            background-color: var(--cor-primaria);
+            color: var(--cor-branco);
+            padding: 10px 15px;
+            border-radius: 4px;
+            font-family: var(--fonte-texto);
+            font-weight: 500;
+            transition: background-color 0.3s;
+            white-space: nowrap;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
 
-.menu-toggle {
-    display: none;
-    font-size: 24px;
-    cursor: pointer;
-    padding: 5px;
-}
+        .btn-header:hover {
+            background-color: #d45a00;
+        }
 
-.mobile-buttons {
-    display: none;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 30px;
-}
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 5px;
+            color: var(--cor-texto);
+        }
 
-.mobile-buttons .btn-header {
-    text-align: center;
-}
+        .mobile-buttons {
+            display: none;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 30px;
+        }
 
-/* Media Queries - Atualizadas para refletir as mudanças */
-@media (max-width: 992px) {
+        .mobile-buttons .btn-header {
+            text-align: center;
+        }
+
+        /* Media Queries */
+@media (max-width: 1100px) {
     nav ul li {
-        margin: 0 10px;
+        margin: 0 8px;
+    }
+    
+    nav ul li a {
+        font-size: 0.9rem;
     }
     
     .btn-header {
-        padding: 8px 15px;
-        font-size: 0.9rem;
+        padding: 8px 12px;
+        font-size: 0.85rem;
     }
 }
 
-@media (max-width: 768px) {
-    header {
-        padding: 0 20px;
-        height: 70px; /* Altura reduzida para mobile */
+@media (max-width: 992px) {
+    nav ul li {
+        margin: 0 6px;
     }
     
+    nav ul li a {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 900px) {
+    /* Header reorganizado para mobile */
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 0;
+    }
+    
+    /* Logo grande na esquerda */
+    .logo {
+        order: 1;
+        flex: 1;
+    }
+    
+    .logo img {
+        height: 65px;
+        width: auto;
+    }
+    
+    /* Menu hamburger na direita */
     .menu-toggle {
         display: block;
+        order: 2;
+        font-size: 28px;
+        padding: 8px;
+        margin-left: 15px;
+        color: #333;
     }
     
-    nav {
-        position: fixed;
-        top: 70px; /* Ajustado para a nova altura do header */
-        left: -100%;
-        width: 80%;
-        height: calc(100vh - 70px);
-        background-color: var(--cor-branco);
-        box-shadow: var(--sombra);
-        transition: left 0.3s ease;
-        z-index: 999;
-        padding: 30px;
-    }
-    
-    nav.active {
-        left: 0;
-    }
-    
-    nav ul {
-        flex-direction: column;
-    }
-    
-    nav ul li {
-        margin: 12px 0;
+    /* Esconde menu desktop */
+    .header-container > nav > ul {
+        display: none;
     }
     
     .header-buttons {
         display: none;
     }
     
-    .mobile-buttons {
-        display: flex;
+    /* Menu mobile */
+    nav {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 280px;
+        height: calc(100vh - 80px);
+        background-color: var(--cor-branco);
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+        transition: left 0.3s ease;
+        z-index: 999;
+        padding: 25px 20px;
+        overflow-y: auto;
     }
     
-    .logo img {
-        height: 50px; /* Ajuste para mobile */
+    nav.active {
+        left: 0;
+    }
+    
+    /* MOSTRA o menu no mobile */
+    nav ul {
+        display: flex !important;
+        flex-direction: column;
+        gap: 0;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    
+    nav ul li {
+        margin: 0;
+        width: 100%;
+    }
+    
+    nav ul li a {
+        font-size: 1.1rem;
+        display: block;
+        padding: 15px 12px;
+        border-bottom: 1px solid #f0f0f0;
+        color: #333;
+        text-decoration: none;
+        transition: background-color 0.3s;
+    }
+    
+    nav ul li a:hover {
+        background-color: #f9f9f9;
+    }
+    
+    /* Remove borda do último item */
+    nav ul li:last-child a {
+        border-bottom: none;
+    }
+    
+    /* Botões mobile - EM BAIXO DO CONTATO */
+    .mobile-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid #f0f0f0;
+    }
+    
+    .mobile-buttons .btn-header {
+        text-align: center;
+        padding: 15px;
+        background-color: var(--cor-primaria);
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        font-weight: 500;
+    }
+    
+    .mobile-buttons .btn-header:hover {
+        background-color: #d45a00;
     }
 }
 
 @media (max-width: 576px) {
     header {
+        height: 75px;
         padding: 0 15px;
-        height: 65px; /* Altura reduzida para mobile pequeno */
-    }
-    
-    .header-container {
-        padding: 3px 0; /* Reduzido ainda mais para mobile */
     }
     
     .logo img {
-        height: 45px; /* Ajuste para mobile pequeno */
+        height: 60px;
     }
     
     .menu-toggle {
-        font-size: 22px;
-        padding: 3px;
+        font-size: 26px;
+        padding: 6px;
     }
     
     nav {
-        top: 65px;
-        height: calc(100vh - 65px);
-        padding: 25px;
+        top: 75px;
+        height: calc(100vh - 75px);
+        width: 85%;
+        padding: 20px 15px;
+    }
+    
+    nav ul li a {
+        font-size: 1rem;
+        padding: 13px 10px;
+    }
+    
+    .mobile-buttons {
+        gap: 12px;
+        margin-top: 15px;
+        padding-top: 15px;
+    }
+    
+    .mobile-buttons .btn-header {
+        padding: 13px;
     }
 }
 
 @media (max-width: 400px) {
-    header {
-        padding: 0 12px;
-    }
-    
     .logo img {
-        height: 40px;
+        height: 55px;
     }
     
     .menu-toggle {
-        font-size: 20px;
+        font-size: 24px;
+        margin-left: 10px;
+    }
+    
+    nav {
+        width: 90%;
+        padding: 15px 12px;
+    }
+    
+    .mobile-buttons {
+        gap: 10px;
+        margin-top: 12px;
+        padding-top: 12px;
+    }
+    
+    .mobile-buttons .btn-header {
+        padding: 12px;
     }
 }
-
-
-
-
-
-
 
 
 
