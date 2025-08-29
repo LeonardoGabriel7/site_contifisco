@@ -1,14 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
+    <title>Blog em Breve</title>
+
     <link rel="stylesheet" href="geral.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+          :root {
+        --cor-primaria: #e56200;
+        --cor-texto: #333333;
+        --cor-cinza: #666666;
+        --cor-branco: #ffffff;
+        --sombra: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    body {
+        background-color: #f9f9f9;
+        color: var(--cor-texto);
+        line-height: 1.6;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .blog-hero {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 60px 20px;
+        min-height: 60vh;
+        height: 60vh;
+    }
+    
+    .blog-content {
+        max-width: 600px;
+    }
+    
+    .blog-icon {
+        font-size: 4rem;
+        color: var(--cor-primaria);
+        margin-bottom: 20px;
+    }
+    
+    .blog-content h1 {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+        color: var(--cor-texto);
+    }
+    
+    .blog-content p {
+        font-size: 1.1rem;
+        color: var(--cor-cinza);
+        margin-bottom: 30px;
+    }
+    
+    @media (max-width: 768px) {
+        .blog-icon {
+            font-size: 3rem;
+        }
+        
+        .blog-content h1 {
+            font-size: 2rem;
+        }
+        
+        .blog-content p {
+            font-size: 1rem;
+        }
+    }
+    </style>
 </head>
 <body>
-    
-<!-- HEADER -->
+
+
+    <!-- HEADER -->
 <header>
     <div class="container header-container">
         <div class="logo">
@@ -50,7 +125,116 @@
 </header>
 
 
+    <!-- Conteúdo Principal -->
+    <section class="blog-hero">
+        <div class="blog-content">
+            <i class="fas fa-blog blog-icon"></i>
+            <h1>Blog em Breve</h1>
+            <p>Estamos preparando conteúdo exclusivo para você. Em breve, nosso blog estará no ar com novidades, artigos e muito mais.</p>
+        </div>
+    </section>
 
 
+    
+   <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Serviços</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Societário</a></li>
+                    <li><a href="#">Contábil</a></li>
+                    <li><a href="#">Tributário</a></li>
+                    <li><a href="#">Departamento Pessoal</a></li>
+                    <li><a href="#">Financeiro - BPO</a></li>
+                    <li><a href="#">Recuperação Tributária</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Cliente</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Indústria</a></li>
+                    <li><a href="#">Comércio</a></li>
+                    <li><a href="#">Serviços</a></li>
+                    <li><a href="#">Tecnologia da Informação</a></li>
+                    <li><a href="#">Terceiro Setor</a></li>
+                    <li><a href="#">Comércio Exterior</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>EMPRESA</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Cs contfisco</a></li>
+                    <li><a href="#">Serviços</a></li>
+                    <li><a href="#">Clientes</a></li>
+                    <li><a href="#">Área do cliente</a></li>
+                    <li><a href="#">Área do colaborador</a></li>
+                    <li><a href="#">Artigo e Notícias</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Suporte</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Centro de ajuda</a></li>
+                    <li><a href="#">Perguntas frequentes</a></li>
+                    <li><a href="#">Contate-nos</a></li>
+                </ul>
+                
+                <!-- ÍCONES DO INSTAGRAM E FACEBOOK ADICIONADOS AQUI -->
+                <div class="social-icons-mini">
+                    <a target="_blank" href="https://www.instagram.com/cs_contfisco/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a target="_blank" href="https://www.facebook.com/cscontfisco?_rdc=1&_rdr#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
+                
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="contact-section">
+            <div class="contact-content">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div class="contact-details">
+                        <h4>Ligue para nós</h4>
+                        <p>(11) 2387-7970</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="contact-details">
+                        <h4>Sede</h4>
+                        <p>Rua Marechal Hermes da Fonseca 104<br>Santana - São Paulo</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div class="contact-details">
+                        <h4>Nos envie um e-mail</h4>
+                        <p>contato@cscontfisco.com.br</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2025 ContFisco – Todos os direitos reservados</p>
+            <div class="footer-bottom-links">
+                <a href="#">Política de privacidade</a>
+                <a href="#">Termos de Uso e Condições</a>
+            </div>
+            <div class="developer">
+                Desenvolvido por <a href="https://www.groupintegra.com.br/" target="_blank" style="color: var(--cor-primaria);">Group Integra</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

@@ -1,16 +1,295 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contato | CS Contabilidade & Fisco</title>
 
-<link rel="icon" type="image/png" href="logo.png">
     <link rel="stylesheet" href="geral.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --cor-primaria: #e56200;
+            --cor-texto: #333333;
+            --cor-cinza: #666666;
+            --cor-branco: #ffffff;
+            --sombra: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: var(--cor-texto);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Hero Contato */
+        .contact-hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--cor-branco);
+            height: 60vh;
+            min-height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .contact-hero-content {
+            max-width: 800px;
+        }
+        
+        .contact-hero-section h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+        
+        .contact-hero-section p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Seção de Contato */
+        .contact-info-section {
+            padding: 80px 0;
+        }
+        
+        .contact-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            align-items: stretch;
+        }
+        
+        .contact-info-card {
+            background: var(--cor-branco);
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: var(--sombra);
+            width: 100%;
+            max-width: 450px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .contact-info-card h2 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: var(--cor-primaria);
+            text-align: center;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+        
+       .contact-icon {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 45px;
+    height: 45px;
+    background: var(--cor-primaria);
+    border-radius: 50%;
+    margin-right: 15px;
+    font-size: 1.1rem;
+    color: var(--cor-branco);
+    flex-shrink: 0;
+}
 
+
+/* CORREÇÃO FINAL - FORÇA A CENTRALIZAÇÃO */
+.contact-icon {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+}
+
+.contact-icon i {
+    display: block !important;
+    margin: 0 auto !important;
+    line-height: 1 !important;
+}
+contact-info-card .contact-item .contact-icon i {
+    display: block;
+    text-align: center;
+    line-height: 1;
+}
+        
+        .contact-details h3 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            color: var(--cor-texto);
+        }
+        
+        .contact-details2 p {
+            color: var(--cor-cinza);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+        
+        .social-media {
+            margin-top: auto;
+            padding-top: 30px;
+            text-align: center;
+        }
+        
+        .social-media h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--cor-texto);
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+        }
+        
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background: var(--cor-primaria);
+            border-radius: 50%;
+            color: var(--cor-branco);
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            background: #d45a00;
+            transform: translateY(-3px);
+        }
+        
+        /* Mapa */
+        .map-wrapper {
+            display: flex;
+            align-items: center;
+            flex: 1;
+        }
+        
+        .map-container {
+            background: var(--cor-branco);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--sombra);
+            height: 450px;
+            width: 100%;
+            max-width: 650px;
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        /* Responsivo */
+        @media (max-width: 1100px) {
+            .contact-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
+            }
+            
+            .map-container {
+                height: 400px;
+                max-width: 100%;
+            }
+            
+            .contact-info-card {
+                max-width: 100%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .contact-hero-section {
+                height: 60vh;
+                min-height: 300px;
+                padding: 0 20px;
+            }
+            
+            .contact-hero-section h1 {
+                font-size: 2.2rem;
+            }
+            
+            .contact-hero-section p {
+                font-size: 1.1rem;
+            }
+            
+            .contact-info-section {
+                padding: 60px 0;
+            }
+            
+            .contact-info-card {
+                padding: 30px 20px;
+            }
+            
+            .contact-item {
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+            }
+            
+            .contact-icon {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+            
+            .map-container {
+                height: 350px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .contact-hero-section h1 {
+                font-size: 1.8rem;
+            }
+            
+            .contact-hero-section p {
+                font-size: 1rem;
+            }
+            
+            .contact-info-card h2 {
+                font-size: 1.5rem;
+            }
+            
+            .social-icons a {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+            
+            .map-container {
+                height: 300px;
+            }
+        }
+    </style>
 </head>
 <body>
-   <!-- HEADER -->
+
+<!-- HEADER -->
 <header>
     <div class="container header-container">
         <div class="logo">
@@ -51,26 +330,167 @@
     </div>
 </header>
 
+    <!-- Hero Contato -->
+    <section class="contact-hero-section">
+        <div class="container contact-hero-content">
+            <h1>Entrar em contato</h1>
+            <p>Como podemos ajudar? Entre em contato conosco através dos canais abaixo.</p>
+        </div>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section class="contact-info-section">
+        <div class="container contact-container">
+            <div class="contact-info-card">
+                <h2>Nossos Contatos</h2>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-details2">
+                        <h3>Sede</h3>
+                        <p>Rua Marechal Hermes da Fonseca 104<br>Santana - São Paulo</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-details2">
+                        <h3>E-mail</h3>
+                        <p>contato@cscontfisco.com.br</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="contact-details2">
+                        <h3>Telefone</h3>
+                        <p>(11) 2387-7970</p>
+                    </div>
+                </div>
+                
+                <div class="social-media">
+                    <h3>Acompanhe nossas redes sociais</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="map-wrapper">
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.2452926117003!2d-46.63746672468632!3d-23.515523978829254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce586f4e150f37%3A0x8b7ff83a10f4e0a1!2sR.%20Marechal%20Hermes%20da%20Fonseca%2C%20104%20-%20Santana%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2002025-020!5e0!3m2!1spt-BR!2sbr!4v1718658486127!5m2!1spt-BR!2sbr" allowfullscreen="" loading=" lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Serviços</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Societário</a></li>
+                    <li><a href="#">Contábil</a></li>
+                    <li><a href="#">Tributário</a></li>
+                    <li><a href="#">Departamento Pessoal</a></li>
+                    <li><a href="#">Financeiro - BPO</a></li>
+                    <li><a href="#">Recuperação Tributária</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Cliente</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Indústria</a></li>
+                    <li><a href="#">Comércio</a></li>
+                    <li><a href="#">Serviços</a></li>
+                    <li><a href="#">Tecnologia da Informação</a></li>
+                    <li><a href="#">Terceiro Setor</a></li>
+                    <li><a href="#">Comércio Exterior</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>EMPRESA</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Cs contfisco</a></li>
+                    <li><a href="#">Serviços</a></li>
+                    <li><a href="#">Clientes</a></li>
+                    <li><a href="#">Área do cliente</a></li>
+                    <li><a href="#">Área do colaborador</a></li>
+                    <li><a href="#">Artigo e Notícias</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Suporte</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Centro de ajuda</a></li>
+                    <li><a href="#">Perguntas frequentes</a></li>
+                    <li><a href="#">Contate-nos</a></li>
+                </ul>
+                
+                <!-- ÍCONES DO INSTAGRAM E FACEBOOK ADICIONADOS AQUI -->
+                <div class="social-icons-mini">
+                    <a target="_blank" href="https://www.instagram.com/cs_contfisco/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a target="_blank" href="https://www.facebook.com/cscontfisco?_rdc=1&_rdr#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
+                
+                
+            </div>
+        </div>
+        
+        <div class="contact-section">
+            <div class="contact-content">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div class="contact-details">
+                        <h4>Ligue para nós</h4>
+                        <p>(11) 2387-7970</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="contact-details">
+                        <h4>Sede</h4>
+                        <p>Rua Marechal Hermes da Fonseca 104<br>Santana - São Paulo</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div class="contact-details">
+                        <h4>Nos envie um e-mail</h4>
+                        <p>contato@cscontfisco.com.br</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2025 ContFisco – Todos os direitos reservados</p>
+            <div class="footer-bottom-links">
+                <a href="#">Política de privacidade</a>
+                <a href="#">Termos de Uso e Condições</a>
+            </div>
+            <div class="developer">
+                Desenvolvido por <a href="https://www.groupintegra.com.br/" target="_blank" style="color: var(--cor-primaria);">Group Integra</a>
+            </div>
+        </div>
+    </footer>
+    
 
 </body>
 </html>

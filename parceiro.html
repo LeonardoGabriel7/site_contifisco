@@ -1,14 +1,338 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Parceiros - CS Contfisco</title>
+
     <link rel="icon" type="image/png" href="logo.png">
     <link rel="stylesheet" href="geral.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+       :root {
+    --cor-primaria: #e56200;
+    --cor-texto: #333333;
+    --cor-cinza: #666666;
+    --cor-branco: #ffffff;
+    --sombra: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero Section com Vídeo */
+.parceiros-hero {
+    position: relative;
+    height: 60vh;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 0 20px;
+    z-index: 1;
+}
+
+.parceiros-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.parceiros-hero p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Seção Categorias */
+.categorias-section {
+    padding: 80px 0;
+    background: var(--cor-branco);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    color: var(--cor-texto);
+    margin-bottom: 15px;
+}
+
+.section-title p {
+    font-size: 1.1rem;
+    color: var(--cor-cinza);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.categorias-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.categoria-card {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 350px;
+}
+
+.categoria-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra);
+}
+
+.categoria-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--cor-primaria);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 2rem;
+    color: var(--cor-branco);
+}
+
+.categoria-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--cor-texto);
+}
+
+.categoria-card p {
+    color: var(--cor-cinza);
+    line-height: 1.6;
+}
+
+/* Container especial para as duas últimas categorias */
+.centralized-categories {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.centralized-categories .categoria-card {
+    flex: 0 0 calc(50% - 15px);
+    max-width: 400px;
+}
+
+/* Seção Vantagens */
+.vantagens-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.vantagens-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.vantagem-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    background: var(--cor-branco);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: var(--sombra);
+}
+
+.vantagem-icon {
+    color: var(--cor-primaria);
+    font-size: 1.5rem;
+    margin-right: 20px;
+    min-width: 30px;
+}
+
+.vantagem-text {
+    flex: 1;
+}
+
+.vantagem-text h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--cor-texto);
+}
+
+.vantagem-text p {
+    color: var(--cor-cinza);
+    line-height: 1.6;
+}
+
+/* Seção Seja Parceiro */
+.seja-parceiro {
+    padding: 80px 0;
+    background: var(--cor-branco);
+    text-align: center;
+}
+
+.seja-parceiro h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--cor-texto);
+}
+
+.seja-parceiro p {
+    font-size: 1.1rem;
+    color: var(--cor-cinza);
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+.btn-parceiro {
+    display: inline-block;
+    background: var(--cor-primaria);
+    color: var(--cor-branco);
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: background 0.3s ease;
+}
+
+.btn-parceiro:hover {
+    background: #d45a00;
+}
+
+/* Responsivo */
+@media (max-width: 992px) {
+    .categorias-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .centralized-categories {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .centralized-categories .categoria-card {
+        flex: 0 0 100%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .parceiros-hero {
+        height: 60vh;
+    }
+    
+    .parceiros-hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .parceiros-hero p {
+        font-size: 1.1rem;
+    }
+    
+    .categorias-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .vantagem-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .vantagem-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .section-title h2 {
+        font-size: 2rem;
+    }
+    
+    .categoria-card {
+        min-height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .parceiros-hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .section-title h2 {
+        font-size: 1.8rem;
+    }
+    
+    .categoria-card {
+        padding: 20px;
+        min-height: 280px;
+    }
+    
+    .centralized-categories .categoria-card {
+        max-width: 100%;
+    }
+}
+</style>
 </head>
 <body>
-     <!-- HEADER -->
+   <!-- HEADER -->
 <header>
     <div class="container header-container">
         <div class="logo">
@@ -48,5 +372,243 @@
         </div>
     </div>
 </header>
+
+    <!-- Hero Section com Vídeo -->
+    <section class="parceiros-hero">
+        <div class="video-background">
+            <video autoplay muted loop playsinline>
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-businessmen-consulting-documents-12514-large.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-content">
+            <h1>Nossos Parceiros</h1>
+            <p>A CS Contfisco acredita no poder das parcerias para oferecer soluções completas e inovadoras aos nossos clientes. Junto de nossos parceiros estratégicos, conseguimos ampliar o alcance dos nossos serviços e gerar ainda mais valor para empresas de todos os portes e segmentos.</p>
+        </div>
+    </section>
+
+  <!-- Seção Categorias -->
+<section class="categorias-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Categorias de Parceiros</h2>
+            <p>Conheça as áreas em que atuamos em parceria para oferecer soluções completas</p>
+        </div>
+        
+        <div class="categorias-grid">
+            <!-- Jurídico -->
+            <div class="categoria-card">
+                <div class="categoria-icon">
+                    <i class="fas fa-gavel"></i>
+                </div>
+                <h3>Jurídico</h3>
+                <p>Escritórios e advogados parceiros que oferecem apoio especializado em direito empresarial, trabalhista, societário e tributário.</p>
+            </div>
+            
+            <!-- Tecnologia -->
+            <div class="categoria-card">
+                <div class="categoria-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h3>Tecnologia & Soluções Digitais</h3>
+                <p>Empresas que fornecem sistemas de gestão, softwares contábeis, plataformas digitais e soluções inovadoras para facilitar a rotina empresarial.</p>
+            </div>
+            
+            <!-- Segurança -->
+            <div class="categoria-card">
+                <div class="categoria-icon">
+                    <i class="fas fa-hard-hat"></i>
+                </div>
+                <h3>Segurança e Medicina do Trabalho</h3>
+                <p>Parceiros que garantem saúde, segurança e bem-estar dos colaboradores das empresas que atendemos.</p>
+            </div>
+            
+            <!-- Container especial para as duas últimas categorias centralizadas -->
+            <div class="centralized-categories">
+                <!-- RH -->
+                <div class="categoria-card">
+                    <div class="categoria-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Recursos Humanos & Treinamento</h3>
+                    <p>Empresas parceiras focadas em recrutamento, seleção, desenvolvimento de talentos e capacitação profissional.</p>
+                </div>
+                
+                <!-- Financeiro -->
+                <div class="categoria-card">
+                    <div class="categoria-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Financeiro & Bancário</h3>
+                    <p>Instituições e consultores financeiros que colaboram para facilitar crédito, gestão financeira e soluções de investimento.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Seção Vantagens -->
+    <section class="vantagens-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Por que nossas parcerias fazem a diferença?</h2>
+                <p>Descubra os benefícios de contar com nossa rede de parceiros especializados</p>
+            </div>
+            
+            <div class="vantagens-list">
+                <div class="vantagem-item">
+                    <div class="vantagem-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="vantagem-text">
+                        <h4>Mais serviços integrados em um só lugar</h4>
+                        <p>Acesso a diversas soluções empresariais através de um único ponto de contato.</p>
+                    </div>
+                </div>
+                
+                <div class="vantagem-item">
+                    <div class="vantagem-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="vantagem-text">
+                        <h4>Atendimento ágil e especializado</h4>
+                        <p>Conectamos você com especialistas de diferentes áreas de forma rápida и eficiente.</p>
+                    </div>
+                </div>
+                
+                <div class="vantagem-item">
+                    <div class="vantagem-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="vantagem-text">
+                        <h4>Soluções personalizadas conforme a necessidade do cliente</h4>
+                        <p>Oferecemos propostas customizadas que atendem às especificidades do seu negócio.</p>
+                    </div>
+                </div>
+                
+                <div class="vantagem-item">
+                    <div class="vantagem-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="vantagem-text">
+                        <h4>Rede de apoio completa para todas as áreas da empresa</h4>
+                        <p>Suporte integral desde a gestão até a operação do seu negócio.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Seja Parceiro -->
+    <section class="seja-parceiro">
+        <div class="container">
+            <h2>Seja um Parceiro da CS Contfisco</h2>
+            <p>Quer se tornar um parceiro da CS Contfisco? Entre em contato conosco e faça parte da nossa rede de negócios.</p>
+            <a href="contato.html" class="btn-parceiro">Entre em Contato</a>
+        </div>
+    </section>
+
+   <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Serviços</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Societário</a></li>
+                    <li><a href="#">Contábil</a></li>
+                    <li><a href="#">Tributário</a></li>
+                    <li><a href="#">Departamento Pessoal</a></li>
+                    <li><a href="#">Financeiro - BPO</a></li>
+                    <li><a href="#">Recuperação Tributária</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Cliente</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Indústria</a></li>
+                    <li><a href="#">Comércio</a></li>
+                    <li><a href="#">Serviços</a></li>
+                    <li><a href="#">Tecnologia da Informação</a></li>
+                    <li><a href="#">Terceiro Setor</a></li>
+                    <li><a href="#">Comércio Exterior</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>EMPRESA</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Cs contfisco</a></li>
+                    <li><a href="#">Serviços</a></li>
+                    <li><a href="#">Clientes</a></li>
+                    <li><a href="#">Área do cliente</a></li>
+                    <li><a href="#">Área do colaborador</a></li>
+                    <li><a href="#">Artigo e Notícias</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Suporte</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Centro de ajuda</a></li>
+                    <li><a href="#">Perguntas frequentes</a></li>
+                    <li><a href="#">Contate-nos</a></li>
+                </ul>
+                
+                <!-- ÍCONES DO INSTAGRAM E FACEBOOK ADICIONADOS AQUI -->
+                <div class="social-icons-mini">
+                    <a target="_blank" href="https://www.instagram.com/cs_contfisco/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a target="_blank" href="https://www.facebook.com/cscontfisco?_rdc=1&_rdr#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
+                
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="contact-section">
+            <div class="contact-content">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div class="contact-details">
+                        <h4>Ligue para nós</h4>
+                        <p>(11) 2387-7970</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="contact-details">
+                        <h4>Sede</h4>
+                        <p>Rua Marechal Hermes da Fonseca 104<br>Santana - São Paulo</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div class="contact-details">
+                        <h4>Nos envie um e-mail</h4>
+                        <p>contato@cscontfisco.com.br</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2025 ContFisco – Todos os direitos reservados</p>
+            <div class="footer-bottom-links">
+                <a href="#">Política de privacidade</a>
+                <a href="#">Termos de Uso e Condições</a>
+            </div>
+            <div class="developer">
+                Desenvolvido por <a href="https://www.groupintegra.com.br/" target="_blank" style="color: var(--cor-primaria);">Group Integra</a>
+            </div>
+        </div>
+    </footer>
+    
 </body>
 </html>
