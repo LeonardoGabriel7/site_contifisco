@@ -1607,6 +1607,172 @@
 
 
 
+/* Seção Sobre Centralizada */
+        .sobre-section {
+            padding: 80px 0;
+            background: var(--cor-branco);
+            text-align: center;
+        }
+        
+        .sobre-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .sobre-texto h2 {
+            font-size: 2.5rem;
+            color: var(--cor-primaria);
+            margin-bottom: 20px;
+        }
+        
+        .sobre-texto p {
+            font-size: 1.1rem;
+            color: var(--cor-cinza);
+            margin-bottom: 25px;
+            line-height: 1.8;
+        }
+        
+        /* Seção Vantagens */
+        .vantagens-section {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+        
+        .vantagens-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+        
+        .vantagens-lista {
+            background: var(--cor-branco);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: var(--sombra);
+        }
+        
+        .vantagens-lista h3 {
+            font-size: 1.8rem;
+            color: var(--cor-primaria);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .vantagem-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+        
+        .vantagem-icon {
+            color: var(--cor-primaria);
+            font-size: 1.8rem;
+            margin-right: 15px;
+            min-width: 40px;
+            text-align: center;
+        }
+        
+        .vantagem-text {
+            flex: 1;
+        }
+        
+        .vantagem-text h4 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: var(--cor-texto);
+        }
+        
+        .vantagem-text p {
+            color: var(--cor-cinza);
+            line-height: 1.6;
+        }
+        
+        .beneficios-lista {
+            background: var(--cor-branco);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: var(--sombra);
+        }
+        
+        .beneficios-lista h3 {
+            font-size: 1.8rem;
+            color: var(--cor-primaria);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .beneficio-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .beneficio-icon {
+            color: var(--cor-primaria);
+            font-size: 1.5rem;
+            margin-right: 15px;
+            min-width: 25px;
+            margin-top: 5px;
+        }
+        
+        .beneficio-text {
+            flex: 1;
+        }
+        
+        .beneficio-text p {
+            color: var(--cor-cinza);
+            line-height: 1.6;
+        }
+        
+        /* Responsivo */
+        @media (max-width: 1024px) {
+            .vantagens-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .sobre-section,
+            .vantagens-section {
+                padding: 60px 0;
+            }
+            
+            .sobre-texto h2 {
+                font-size: 2rem;
+            }
+            
+            .vantagens-lista,
+            .beneficios-lista {
+                padding: 30px 20px;
+            }
+            
+            .vantagem-item {
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+            }
+            
+            .vantagem-icon {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .sobre-texto h2 {
+                font-size: 1.8rem;
+            }
+            
+            .vantagens-lista h3,
+            .beneficios-lista h3 {
+                font-size: 1.5rem;
+            }
+            
+            .vantagem-icon {
+                font-size: 1.5rem;
+            }
+        }
 
 
 

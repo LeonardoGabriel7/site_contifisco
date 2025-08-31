@@ -81,103 +81,143 @@ body {
     z-index: 1;
 }
 
-.parceiros-hero h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.parceiros-hero p {
-    font-size: 1.3rem;
-    margin-bottom: 30px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-}
-
 /* Seção Categorias */
-.categorias-section {
-    padding: 80px 0;
-    background: var(--cor-branco);
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.section-title h2 {
-    font-size: 2.5rem;
-    color: var(--cor-texto);
-    margin-bottom: 15px;
-}
-
-.section-title p {
-    font-size: 1.1rem;
-    color: var(--cor-cinza);
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.categorias-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
-
-.categoria-card {
-    background: #f8f9fa;
-    border-radius: 10px;
-    padding: 30px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 350px;
-}
-
-.categoria-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--sombra);
-}
-
-.categoria-icon {
-    width: 80px;
-    height: 80px;
-    background: var(--cor-primaria);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 20px;
-    font-size: 2rem;
-    color: var(--cor-branco);
-}
-
-.categoria-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    color: var(--cor-texto);
-}
-
-.categoria-card p {
-    color: var(--cor-cinza);
-    line-height: 1.6;
-}
-
-/* Container especial para as duas últimas categorias */
-.centralized-categories {
-    grid-column: 1 / -1;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 20px;
-}
-
-.centralized-categories .categoria-card {
-    flex: 0 0 calc(50% - 15px);
-    max-width: 400px;
-}
+        .categorias-section {
+            padding: 80px 0;
+            background: var(--cor-branco);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--cor-texto);
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            font-size: 1.1rem;
+            color: var(--cor-cinza);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .categorias-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        
+        .categoria-card {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--sombra);
+            height: 300px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .categoria-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .categoria-imagem {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+        
+        .categoria-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.8) 100%);
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 30px;
+            color: var(--cor-branco);
+        }
+        
+        .categoria-content {
+            position: relative;
+            z-index: 3;
+        }
+        
+        .categoria-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--cor-branco);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .categoria-card p {
+            color: var(--cor-branco);
+            line-height: 1.6;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+        }
+        
+        /* Responsivo */
+        @media (max-width: 1024px) {
+            .categorias-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .categoria-card {
+                height: 350px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .categoria-card {
+                height: 300px;
+            }
+            
+            .categoria-card h3 {
+                font-size: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .categorias-section {
+                padding: 60px 0;
+            }
+            
+            .categoria-card {
+                height: 250px;
+            }
+            
+            .categoria-overlay {
+                padding: 20px;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .categoria-card h3 {
+                font-size: 1.3rem;
+            }
+            
+            .categoria-card p {
+                font-size: 0.9rem;
+            }
+        }
 
 /* Seção Vantagens */
 .vantagens-section {
@@ -222,7 +262,24 @@ body {
     line-height: 1.6;
 }
 
+
+/* Ajustes para o Hero Section */
+.parceiros-hero h1 {
+    font-size: 3.1rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.parceiros-hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+
 /* Seção Seja Parceiro */
+
+
 .seja-parceiro {
     padding: 80px 0;
     background: var(--cor-branco);
@@ -388,65 +445,61 @@ body {
         </div>
     </section>
 
-  <!-- Seção Categorias -->
-<section class="categorias-section">
-    <div class="container">
-        <div class="section-title">
-            <h2>Categorias de Parceiros</h2>
-            <p>Conheça as áreas em que atuamos em parceria para oferecer soluções completas</p>
-        </div>
-        
-        <div class="categorias-grid">
-            <!-- Jurídico -->
-            <div class="categoria-card">
-                <div class="categoria-icon">
-                    <i class="fas fa-gavel"></i>
-                </div>
-                <h3>Jurídico</h3>
-                <p>Escritórios e advogados parceiros que oferecem apoio especializado em direito empresarial, trabalhista, societário e tributário.</p>
+<!-- Seção Categorias -->
+    <section class="categorias-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Categorias de Parceiros</h2>
+                <p>Conheça as áreas em que atuamos em parceria para oferecer soluções completas</p>
             </div>
             
-            <!-- Tecnologia -->
-            <div class="categoria-card">
-                <div class="categoria-icon">
-                    <i class="fas fa-laptop-code"></i>
-                </div>
-                <h3>Tecnologia & Soluções Digitais</h3>
-                <p>Empresas que fornecem sistemas de gestão, softwares contábeis, plataformas digitais e soluções inovadoras para facilitar a rotina empresarial.</p>
-            </div>
-            
-            <!-- Segurança -->
-            <div class="categoria-card">
-                <div class="categoria-icon">
-                    <i class="fas fa-hard-hat"></i>
-                </div>
-                <h3>Segurança e Medicina do Trabalho</h3>
-                <p>Parceiros que garantem saúde, segurança e bem-estar dos colaboradores das empresas que atendemos.</p>
-            </div>
-            
-            <!-- Container especial para as duas últimas categorias centralizadas -->
-            <div class="centralized-categories">
-                <!-- RH -->
+            <div class="categorias-grid">
+                <!-- Jurídico -->
                 <div class="categoria-card">
-                    <div class="categoria-icon">
-                        <i class="fas fa-users"></i>
+                    <img src="https://images.unsplash.com/photo-1589391886645-d51941baf7fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Jurídico" class="categoria-imagem">
+                    <div class="categoria-overlay">
+                        <div class="categoria-content">
+                            <h3>Jurídico</h3>
+                            <p>Escritórios e advogados parceiros que oferecem apoio especializado em direito empresarial, trabalhista, societário e tributário.</p>
+                        </div>
                     </div>
-                    <h3>Recursos Humanos & Treinamento</h3>
-                    <p>Empresas parceiras focadas em recrutamento, seleção, desenvolvimento de talentos e capacitação profissional.</p>
                 </div>
                 
-                <!-- Financeiro -->
+                <!-- Tecnologia -->
                 <div class="categoria-card">
-                    <div class="categoria-icon">
-                        <i class="fas fa-chart-line"></i>
+                    <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Tecnologia" class="categoria-imagem">
+                    <div class="categoria-overlay">
+                        <div class="categoria-content">
+                            <h3>Tecnologia & Soluções Digitais</h3>
+                            <p>Empresas que fornecem sistemas de gestão, softwares contábeis, plataformas digitais e soluções inovadoras para facilitar a rotina empresarial.</p>
+                        </div>
                     </div>
-                    <h3>Financeiro & Bancário</h3>
-                    <p>Instituições e consultores financeiros que colaboram para facilitar crédito, gestão financeira e soluções de investimento.</p>
+                </div>
+                
+           <!-- Segurança - Opção 1 -->
+<div class="categoria-card">
+    <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Segurança" class="categoria-imagem">
+    <div class="categoria-overlay">
+        <div class="categoria-content">
+            <h3>Segurança e Medicina do Trabalho</h3>
+            <p>Parceiros que garantem saúde, segurança e bem-estar dos colaboradores das empresas que atendemos.</p>
+        </div>
+    </div>
+</div>
+                
+                <!-- RH -->
+                <div class="categoria-card">
+                    <img src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Recursos Humanos" class="categoria-imagem">
+                    <div class="categoria-overlay">
+                        <div class="categoria-content">
+                            <h3>Recursos Humanos & Treinamento</h3>
+                            <p>Empresas parceiras focadas em recrutamento, seleção, desenvolvimento de talentos e capacitação profissional.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Seção Vantagens -->
     <section class="vantagens-section">

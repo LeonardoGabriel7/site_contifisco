@@ -76,7 +76,7 @@
     <link rel="stylesheet" href="clientes-style.css">
 </head>
 <body>
-    <!-- Seção de Clientes -->
+   <!-- Seção de Clientes -->
     <section class="clients-section">
         <div class="container">
             <div class="section-header">
@@ -86,9 +86,9 @@
             
             <div class="clients-carousel">
                 <div class="carousel-track">
-                    <!-- Primeira linha de logos -->
+                    <!-- Primeira linha de logos (1-8) -->
                     <div class="carousel-slide">
-                        <div class="client-logo"><img src="1.png" alt="Cliente 1"></div>
+                       <div class="client-logo"><img src="1.png" alt="Cliente 1"></div>
                         <div class="client-logo"><img src="2.png" alt="Cliente 2"></div>
                         <div class="client-logo"><img src="3.png" alt="Cliente 3"></div>
                         <div class="client-logo"><img src="4.png" alt="Cliente 4"></div>
@@ -98,19 +98,19 @@
                         <div class="client-logo"><img src="8.png" alt="Cliente 8"></div>
                     </div>
                     
-                    <!-- Segunda linha de logos -->
+                    <!-- Segunda linha de logos (9-16) -->
                     <div class="carousel-slide">
                         <div class="client-logo"><img src="9.png" alt="Cliente 9"></div>
                         <div class="client-logo"><img src="10.png" alt="Cliente 10"></div>
                         <div class="client-logo"><img src="11.png" alt="Cliente 11"></div>
-                        <div class="client-logo"><img src="12.png" alt="Cliente 12"></div>
                         <div class="client-logo"><img src="13.png" alt="Cliente 13"></div>
                         <div class="client-logo"><img src="14.png" alt="Cliente 14"></div>
                         <div class="client-logo"><img src="15.png" alt="Cliente 15"></div>
                         <div class="client-logo"><img src="16.png" alt="Cliente 16"></div>
+                        
                     </div>
                     
-                    <!-- Terceira linha de logos -->
+                    <!-- Terceira linha de logos (17-24) -->
                     <div class="carousel-slide">
                         <div class="client-logo"><img src="17.png" alt="Cliente 17"></div>
                         <div class="client-logo"><img src="18.png" alt="Cliente 18"></div>
@@ -119,19 +119,46 @@
                         <div class="client-logo"><img src="21.png" alt="Cliente 21"></div>
                         <div class="client-logo"><img src="22.png" alt="Cliente 22"></div>
                         <div class="client-logo"><img src="23.png" alt="Cliente 23"></div>
-                        <div class="client-logo"><img src="1.png" alt="Cliente 1"></div> <!-- Repetição para efeito contínuo -->
+                        
+                    </div>
+                    
+                    <!-- Quarta linha de logos (25-32) -->
+                    <div class="carousel-slide">
+                        <div class="client-logo"><img src="25.jpeg" alt="Cliente 25"></div>
+                        <div class="client-logo"><img src="26.jpg" alt="Cliente 26"></div>
+                        <div class="client-logo"><img src="27.jpg" alt="Cliente 27"></div>
+                        <div class="client-logo"><img src="28.jpeg" alt="Cliente 28"></div>
+                        <div class="client-logo"><img src="29.jpeg" alt="Cliente 29"></div>
+                        <div class="client-logo"><img src="31.jpg" alt="Cliente 31"></div>
+                        <div class="client-logo"><img src="32.jpeg" alt="Cliente 32"></div>
+                    </div>
+                    
+                    <!-- Quinta linha de logos (33-40) -->
+                    <div class="carousel-slide">
+                
+                      
+                        <div class="client-logo"><img src="35.png" alt="Cliente 35"></div>
+                        <div class="client-logo"><img src="36.jpg" alt="Cliente 36"></div>
+                        
+                        <div class="client-logo"><img src="38.jpg" alt="Cliente 38"></div>
+                        <div class="client-logo"><img src="39.jpg" alt="Cliente 39"></div>
+                        <div class="client-logo"><img src="40.jpg" alt="Cliente 40"></div>
+                    </div>
+                    
+                    <!-- Sexta linha de logos (41-46) -->
+                    <div class="carousel-slide">
+                        <div class="client-logo"><img src="41.png" alt="Cliente 41"></div>
+                        <div class="client-logo"><img src="42.jpeg" alt="Cliente 42"></div>
+                        <div class="client-logo"><img src="44.png" alt="Cliente 44"></div>
+                        <div class="client-logo"><img src="45.jpeg" alt="Cliente 45"></div>
+                        <div class="client-logo"><img src="46.png" alt="Cliente 46"></div>
+                        <!-- Adicionei mais 3 para completar a linha -->
+                        <div class="client-logo"><img src="1.png" alt="Cliente 1"></div>
+                        <div class="client-logo"><img src="2.png" alt="Cliente 2"></div>
+                        <div class="client-logo"><img src="3.png" alt="Cliente 3"></div>
                     </div>
                 </div>
             </div>
-            
-            <div class="clients-info">
-                <p>Mais de <span>1.000 empresas</span> confiam em nossos serviços especializados</p>
-                <a href="https://api.whatsapp.com/send/?phone=551123877970&text=Olá&type=phone_number&app_absent=0" 
-                   class="whatsapp-btn" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Seja nosso cliente
-                </a>
-            </div>
-        </div>
     </section>
 
 
@@ -194,7 +221,7 @@
 
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+          document.addEventListener('DOMContentLoaded', function() {
             const track = document.querySelector('.carousel-track');
             const slides = document.querySelectorAll('.carousel-slide');
             const slideWidth = slides[0].offsetWidth;
@@ -208,7 +235,7 @@
             });
             
             function animateCarousel() {
-                currentPosition -= 1; // Velocidade do movimento
+                currentPosition -= 2.5; // Aumentei a velocidade (era 1.7)
                 
                 // Resetar posição quando chegar ao final
                 if (currentPosition <= -slideWidth * slides.length) {
