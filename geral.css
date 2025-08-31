@@ -15,121 +15,121 @@
 }
 
 header {
-            background-color: var(--cor-branco);
-            box-shadow: var(--sombra);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            padding: 0 15px;
-            font-family:'Montserrat', sans-serif ;
-            font-weight: 700;
-            height: 80px;
-            display: flex;
-            align-items: center;
-        }
+    background-color: var(--cor-branco);
+    box-shadow: var(--sombra);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 0 15px;
+    font-family:'Montserrat', sans-serif ;
+    font-weight: 700;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
 
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 5px 0;
-        }
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+}
 
-        .logo {
-            display: flex;
-            align-items: center;
-            height: 100%;
-            flex-shrink: 0; /* Impede que a logo encolha */
-        }
+.logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    flex-shrink: 0; /* Impede que a logo encolha */
+}
 
-        .logo img {
-            height: 65px; /* Aumentei ainda mais a logo no desktop */
-            width: auto;
-            object-fit: contain;
-        }
+.logo img {
+    height: 65px; /* Aumentei ainda mais a logo no desktop */
+    width: auto;
+    object-fit: contain;
+}
 
-        /* Menu central */
-        nav {
-            flex: 1; /* Ocupa o espaço disponível */
-            display: flex;
-            justify-content: center; /* Centraliza o menu */
-        }
+/* Menu central */
+nav {
+    flex: 1; /* Ocupa o espaço disponível */
+    display: flex;
+    justify-content: center; /* Centraliza o menu */
+}
 
-        nav ul {
-            display: flex;
-            list-style: none;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
+nav ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
-        nav ul li {
-            margin: 0 10px;
-        }
+nav ul li {
+    margin: 0 10px;
+}
 
-        nav ul li a {
-            font-family: var(--fonte-texto);
-            font-weight: 700;
-            color: var(--cor-texto);
-            transition: color 0.3s;
-            text-decoration: none;
-            font-size: 0.95rem;
-            white-space: nowrap;
-        }
-        
-        nav ul li a:hover {
-            color: var(--cor-primaria);
-        }
+nav ul li a {
+    font-family: var(--fonte-texto);
+    font-weight: 700;
+    color: var(--cor-texto);
+    transition: color 0.3s;
+    text-decoration: none;
+    font-size: 0.95rem;
+    white-space: nowrap;
+}
 
-        /* Botões à direita */
-        .header-buttons {
-            display: flex;
-            gap: 12px;
-            flex-shrink: 0; /* Impede que os botões encolham */
-        }
+nav ul li a:hover {
+    color: var(--cor-primaria);
+}
 
-        .btn-header {
-            background-color: var(--cor-primaria);
-            color: var(--cor-branco);
-            padding: 10px 15px;
-            border-radius: 4px;
-            font-family: var(--fonte-texto);
-            font-weight: 500;
-            transition: background-color 0.3s;
-            white-space: nowrap;
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
+/* Botões à direita */
+.header-buttons {
+    display: flex;
+    gap: 12px;
+    flex-shrink: 0; /* Impede que os botões encolham */
+}
 
-        .btn-header:hover {
-            background-color: #d45a00;
-        }
+.btn-header {
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-family: var(--fonte-texto);
+    font-weight: 500;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
 
-        .menu-toggle {
-            display: none;
-            font-size: 24px;
-            cursor: pointer;
-            padding: 5px;
-            color: var(--cor-texto);
-        }
+.btn-header:hover {
+    background-color: #d45a00;
+}
 
-        .mobile-buttons {
-            display: none;
-            flex-direction: column;
-            gap: 15px;
-            margin-top: 30px;
-        }
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+    color: var(--cor-texto);
+}
 
-        .mobile-buttons .btn-header {
-            text-align: center;
-        }
+.mobile-buttons {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
 
-        /* Media Queries */
+.mobile-buttons .btn-header {
+    text-align: center;
+}
+
+/* Media Queries */
 @media (max-width: 1100px) {
     nav ul li {
         margin: 0 8px;
@@ -171,7 +171,7 @@ header {
     }
     
     .logo img {
-        height: 65px;
+        height: 90px; /* Aumentei o tamanho da logo no mobile */
         width: auto;
     }
     
@@ -279,7 +279,7 @@ header {
     }
     
     .logo img {
-        height: 60px;
+        height: 65px; /* Aumentei o tamanho da logo em dispositivos menores */
     }
     
     .menu-toggle {
@@ -312,7 +312,7 @@ header {
 
 @media (max-width: 400px) {
     .logo img {
-        height: 55px;
+        height: 60px; /* Aumentei o tamanho da logo em dispositivos muito pequenos */
     }
     
     .menu-toggle {
