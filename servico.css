@@ -103,9 +103,21 @@ body {
 /* ==========================================================================
    Seção de Serviços
    ========================================================================== */
-.services-section {
+
+
+.container{
+    
+}
+
+
+
+
+   .services-section {
     padding: 70px 0;
     background-color: var(--cor-branco);
+
+
+    background-color: #ADADAD ;
 }
 
 .section-header {
