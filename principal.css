@@ -582,6 +582,13 @@
 .contabilidade-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    background-color: #D45A00;
+}
+
+.contabilidade-card:hover .contabilidade-card-title,
+.contabilidade-card:hover .contabilidade-card-text,
+.contabilidade-card:hover .contabilidade-card-icon {
+    color: #FFFFFF; /* Muda a cor do texto e ícone para branco no hover */
 }
 
 .contabilidade-card-icon {
@@ -595,6 +602,11 @@
     margin: 0 auto 18px;
     font-size: 1.7rem;
     color: #FF6E00;
+    transition: all 0.3s ease; /* Adiciona transição suave para o ícone */
+}
+
+.contabilidade-card:hover .contabilidade-card-icon {
+    background-color: rgba(255, 255, 255, 0.2); /* Fundo do ícone mais claro no hover */
 }
 
 .contabilidade-card-title {
@@ -602,12 +614,69 @@
     margin-bottom: 12px;
     color: #333;
     font-family: 'Montserrat', sans-serif;
+    transition: all 0.3s ease; /* Adiciona transição suave para o título */
 }
 
 .contabilidade-card-text {
     color: #666;
     line-height: 1.5;
     font-size: 0.95rem;
+    transition: all 0.3s ease; /* Adiciona transição suave para o texto */
+}
+
+/* Botão do WhatsApp */
+.contabilidade-whatsapp {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.whatsapp-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #25D366;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    gap: 10px;
+}
+
+.whatsapp-button:hover {
+    background-color: #128C7E;
+    transform: translateY(-2px);
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .contabilidade-row {
+        flex-wrap: wrap;
+    }
+    
+    .contabilidade-card {
+        flex: 0 0 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .contabilidade-title {
+        font-size: 1.5rem;
+    }
+    
+    .contabilidade-desc {
+        font-size: 1rem;
+    }
+    
+    .contabilidade-card {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    .contabilidade-row {
+        flex-direction: column;
+    }
 }
 
 /* Botão do WhatsApp */
@@ -1608,6 +1677,18 @@
 
 
 /* Seção Sobre Centralizada */
+
+.texto-empresa {
+    white-space: nowrap;
+}
+
+
+.empresa{
+
+    margin-left: -50px;
+    margin-right: -50px;
+}
+
         .sobre-section {
             padding: 80px 0;
             background: var(--cor-branco);
