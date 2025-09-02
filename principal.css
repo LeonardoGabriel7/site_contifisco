@@ -568,9 +568,7 @@
 }
 
 .contabilidade-card {
-    background-color:#D55E06 ;
-
-
+    background-color: #fff; /* FUNDO BRANCO */
     border-radius: 8px;
     padding: 25px 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -584,19 +582,13 @@
 .contabilidade-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-    background-color: #D45A00;
+    background-color: #D45A00; /* LARANJA NO HOVER */
 }
 
 .contabilidade-card:hover .contabilidade-card-title,
 .contabilidade-card:hover .contabilidade-card-text,
 .contabilidade-card:hover .contabilidade-card-icon {
-    color: #FFFFFF; /* Muda a cor do texto e ícone para branco no hover */
-}
-
-.contabilidade-card .contabilidade-card-title,
-.contabilidade-card .contabilidade-card-text,
-.contabilidade-card .contabilidade-card-icon {
-    color: #FFFFFF; /* Muda a cor do texto e ícone para branco no hover */
+    color: #FFFFFF; /* Texto branco no hover */
 }
 
 .contabilidade-card-icon {
@@ -609,27 +601,28 @@
     justify-content: center;
     margin: 0 auto 18px;
     font-size: 1.7rem;
-    color: #FF6E00;
-    transition: all 0.3s ease; /* Adiciona transição suave para o ícone */
+    color: #FF6E00; /* Ícone laranja */
+    transition: all 0.3s ease;
 }
 
 .contabilidade-card:hover .contabilidade-card-icon {
-    background-color: rgba(255, 255, 255, 0.2); /* Fundo do ícone mais claro no hover */
+    background-color: rgba(255, 255, 255, 0.2); /* Fundo branco semi-transparente no hover */
+    color: #FFFFFF; /* Ícone branco no hover */
 }
 
 .contabilidade-card-title {
     font-size: 1.2rem;
     margin-bottom: 12px;
-    color: #333;
+    color: #333; /* Título escuro */
     font-family: 'Montserrat', sans-serif;
-    transition: all 0.3s ease; /* Adiciona transição suave para o título */
+    transition: all 0.3s ease;
 }
 
 .contabilidade-card-text {
-    color: #666;
+    color: #666; /* Texto cinza */
     line-height: 1.5;
     font-size: 0.95rem;
-    transition: all 0.3s ease; /* Adiciona transição suave para o texto */
+    transition: all 0.3s ease;
 }
 
 /* Botão do WhatsApp */
@@ -697,7 +690,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--cor-primaria);
+    background-color: #FF6E00;
     color: white;
     padding: 15px 30px;
     border-radius: 50px;
@@ -710,7 +703,7 @@
 }
 
 .whatsapp-button:hover {
-    background-color:var(--cor-primaria);
+    background-color: #D45A00;
     transform: translateY(-3px);
     box-shadow: 0 6px 16px rgba(247, 111, 1, 0.4);
 }
@@ -896,10 +889,7 @@
 
 
 
-
-
-
-/* Seção Por que escolhermos - Compacta */
+/* Seção Por que escolhernos - Compacta */
 .escolha-section {
     padding: 40px 15px 30px;
     background-color: #f9f9f9;
@@ -951,44 +941,63 @@
     display: flex;
     align-items: flex-start;
     gap: 20px;
-    background: #FF6E00; /* fundo laranja */
+    background: #ffffff; /* FUNDO BRANCO (alterado) */
     border-radius: 8px;
     padding: 25px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
-    color: #fff; /* deixa todo texto branco por padrão */
+    color: #333; /* TEXTO ESCURO (alterado) */
+    border-left: 4px solid #FF6E00; /* Borda lateral laranja */
 }
 
 .escolha-card:hover {
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    background: #FF6E00; /* FUNDO LARANJA NO HOVER (alterado) */
+    color: #fff; /* TEXTO BRANCO NO HOVER (alterado) */
 }
 
 .escolha-card-icon {
     width: 50px;
     height: 50px;
-    background-color: #fff; /* bolinha branca */
+    background-color: rgba(255, 110, 0, 0.1); /* FUNDO LARANJA CLARO (alterado) */
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.4rem;
-    color: #FF6E00; /* ícone laranja */
+    color: #FF6E00; /* ÍCONE LARANJA */
     flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.escolha-card:hover .escolha-card-icon {
+    background-color: #fff; /* FUNDO BRANCO NO HOVER (alterado) */
+    color: #FF6E00; /* ÍCONE LARANJA NO HOVER (alterado) */
+}
+
+.escolha-card-content {
+    flex: 1;
 }
 
 .escolha-card-title {
     font-size: 1.2rem;
-    color: #fff; /* título branco */
+    color: inherit; /* HERDA A COR DO CARD */
     margin-bottom: 10px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
+    transition: all 0.3s ease;
 }
 
 .escolha-card-text {
-    color: #f9f9f9; /* texto branco suave */
+    color: inherit; /* HERDA A COR DO CARD */
     line-height: 1.5;
     font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.escolha-card:hover .escolha-card-text {
+    color: rgba(255, 255, 255, 0.95); /* TEXTO BRANCO NO HOVER */
 }
 
 /* Responsividade */
@@ -1092,9 +1101,6 @@
         font-size: 0.85rem;
     }
 }
-
-
-
 
 
 
@@ -1371,33 +1377,50 @@
 }
 
 .processo-item {
-    background: #FF6E00; /* fundo laranja */
+    background: #ffffff; /* FUNDO BRANCO (alterado) */
     padding: 25px 20px;
     border-radius: 8px;
-    border: 2px solid white; 
+    border: 2px solid #f0f0f0; /* Borda cinza clara (alterado) */
     text-align: center;
-    color: white; /* textos brancos */
+    color: #333; /* TEXTOS ESCUROS (alterado) */
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.processo-item:hover {
+    background: #FF6E00; /* FUNDO LARANJA NO HOVER (alterado) */
+    color: white; /* TEXTOS BRANCOS NO HOVER (alterado) */
+    border-color: #FF6E00; /* BORDA LARANJA NO HOVER (alterado) */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 110, 0, 0.2);
 }
 
 .processo-icon {
     display: block;
     width: 40px;
     height: 40px;
-    background: white; /* bolinha branca */
-    color: #FF6E00; /* número laranja */
+    background: rgba(255, 110, 0, 0.1); /* FUNDO LARANJA CLARO (alterado) */
+    color: #FF6E00; /* NÚMERO LARANJA */
     border-radius: 50%;
     margin: 0 auto 15px;
     font-weight: bold;
     font-size: 1.2rem;
     line-height: 40px;
     font-family: 'Montserrat', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.processo-item:hover .processo-icon {
+    background: white; /* FUNDO BRANCO NO HOVER (alterado) */
+    color: #FF6E00; /* NÚMERO LARANJA NO HOVER (alterado) */
 }
 
 .processo-item h3 {
     font-size: 1.2rem;
-    color: white; /* título branco */
+    color: inherit; /* HERDA A COR DO ITEM */
     margin-bottom: 15px;
     font-family: 'Montserrat', sans-serif;
+    transition: all 0.3s ease;
 }
 
 .processo-item ul {
@@ -1408,16 +1431,22 @@
 
 .processo-item li {
     padding: 6px 0;
-    color: white; /* texto branco */
+    color: inherit; /* HERDA A COR DO ITEM */
     font-size: 0.9rem;
     position: relative;
+    transition: all 0.3s ease;
 }
 
 .processo-item li:before {
     content: "•";
-    color: white; /* bolinha branca */
+    color: inherit; /* HERDA A COR DO ITEM */
     font-weight: bold;
     margin-right: 5px;
+    transition: all 0.3s ease;
+}
+
+.processo-item:hover li:before {
+    color: white; /* BOLINHA BRANCA NO HOVER */
 }
 
 .processos-cta {
@@ -1507,14 +1536,11 @@
         font-size: 0.85rem;
     }
     
-    .processos-cta a {
-        padding: 8px 20px;
+    .processos-btn {
+        padding: 10px 25px;
         font-size: 0.9rem;
     }
 }
-
-
-
 
 
 
