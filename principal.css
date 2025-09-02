@@ -568,7 +568,9 @@
 }
 
 .contabilidade-card {
-    background-color: #fff;
+    background-color:#D55E06 ;
+
+
     border-radius: 8px;
     padding: 25px 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -588,6 +590,12 @@
 .contabilidade-card:hover .contabilidade-card-title,
 .contabilidade-card:hover .contabilidade-card-text,
 .contabilidade-card:hover .contabilidade-card-icon {
+    color: #FFFFFF; /* Muda a cor do texto e ícone para branco no hover */
+}
+
+.contabilidade-card .contabilidade-card-title,
+.contabilidade-card .contabilidade-card-text,
+.contabilidade-card .contabilidade-card-icon {
     color: #FFFFFF; /* Muda a cor do texto e ícone para branco no hover */
 }
 
@@ -943,44 +951,42 @@
     display: flex;
     align-items: flex-start;
     gap: 20px;
-    background: white;
+    background: #FF6E00; /* fundo laranja */
     border-radius: 8px;
     padding: 25px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
+    color: #fff; /* deixa todo texto branco por padrão */
 }
 
 .escolha-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
 .escolha-card-icon {
     width: 50px;
     height: 50px;
-    background-color: rgba(255, 110, 0, 0.1);
+    background-color: #fff; /* bolinha branca */
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.4rem;
-    color: #FF6E00;
+    color: #FF6E00; /* ícone laranja */
     flex-shrink: 0;
-}
-
-.escolha-card-content {
-    flex: 1;
 }
 
 .escolha-card-title {
     font-size: 1.2rem;
-    color: #333;
+    color: #fff; /* título branco */
     margin-bottom: 10px;
     font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
 }
 
 .escolha-card-text {
-    color: #666;
+    color: #f9f9f9; /* texto branco suave */
     line-height: 1.5;
     font-size: 0.95rem;
 }
@@ -1365,19 +1371,20 @@
 }
 
 .processo-item {
-    background: white;
+    background: #FF6E00; /* fundo laranja */
     padding: 25px 20px;
     border-radius: 8px;
-    border: 2px solid #FF6E00;
+    border: 2px solid white; 
     text-align: center;
+    color: white; /* textos brancos */
 }
 
 .processo-icon {
     display: block;
     width: 40px;
     height: 40px;
-    background: #FF6E00;
-    color: white;
+    background: white; /* bolinha branca */
+    color: #FF6E00; /* número laranja */
     border-radius: 50%;
     margin: 0 auto 15px;
     font-weight: bold;
@@ -1388,7 +1395,7 @@
 
 .processo-item h3 {
     font-size: 1.2rem;
-    color: #333;
+    color: white; /* título branco */
     margin-bottom: 15px;
     font-family: 'Montserrat', sans-serif;
 }
@@ -1401,14 +1408,14 @@
 
 .processo-item li {
     padding: 6px 0;
-    color: #555;
+    color: white; /* texto branco */
     font-size: 0.9rem;
     position: relative;
 }
 
 .processo-item li:before {
     content: "•";
-    color: #FF6E00;
+    color: white; /* bolinha branca */
     font-weight: bold;
     margin-right: 5px;
 }
